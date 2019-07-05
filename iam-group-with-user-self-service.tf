@@ -6,7 +6,7 @@ resource "aws_iam_group" "group" {
 resource "aws_iam_group_policy" "group_policy" {
   name  = "${var.name}"
   group = "${aws_iam_group.group.id}"
-  count = "${var.user_self_service}"
+#   count = "${var.user_self_service}"
 
   policy = <<EOF
 {
