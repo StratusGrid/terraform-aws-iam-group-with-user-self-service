@@ -33,10 +33,8 @@ variable "path" {
 #   }
 # }
 
-## user_self_service count is not currently in use because it causes "'count' cannot be computed" errors prior to 0.12.0. May be added later
-
-# variable "user_self_service" {
-#   description = "True/False to add inline permissions for user self service to the group. Default is True"
-#   type = "string"
-#   default = true
-# }
+variable "user_self_service" {
+  description = "True/False to add inline permissions for user self service to the group. Default is True"
+  type = "string"
+  default = true
+}
