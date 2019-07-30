@@ -1,12 +1,12 @@
 resource "aws_iam_group" "group" {
-  name = "${var.name}"
-  path = "${var.path}"
+  name = var.name
+  path = var.path
 }
 
 resource "aws_iam_group_policy" "group_policy" {
-  name  = "${var.name}"
-  group = "${aws_iam_group.group.id}"
-  count = "${var.user_self_service}"
+  name  = var.name
+  group = aws_iam_group.group.id
+  count = var.user_self_service ? 1 : 0
 
   policy = <<EOF
 {
@@ -66,4 +66,6 @@ resource "aws_iam_group_policy" "group_policy" {
   ]
 }
 EOF
+
 }
+
