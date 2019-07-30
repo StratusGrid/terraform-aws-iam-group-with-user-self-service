@@ -13,13 +13,13 @@
 
 variable "name" {
   description = "The name of the group in IAM"
-  type = "string"
+  type        = string
 }
 
 variable "path" {
   description = "The path of the group in IAM"
-  type = "string"
-  default = "/"
+  type        = string
+  default     = "/"
 }
 
 ## Not using input_tags since Groups don't currently support tags
@@ -35,6 +35,7 @@ variable "path" {
 
 variable "user_self_service" {
   description = "True/False to add inline permissions for user self service to the group. Default is True"
-  type = "string"
-  default = true
+  type        = string
+  default     = true
 }
+
