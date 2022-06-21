@@ -17,7 +17,7 @@ data "aws_iam_policy_document" "iam_group_with_user_self_service" {
     sid = "SelfServiceAccessWithoutMFA"
 
     actions = [
-       "iam:List*",
+        "iam:List*",
         "iam:GetUser",
         "iam:GetAccountPasswordPolicy",
         "iam:ChangePassword",
