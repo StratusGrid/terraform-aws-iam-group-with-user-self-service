@@ -8,5 +8,5 @@ resource "aws_iam_group_policy" "group_policy" {
   group = aws_iam_group.group.id
   count = var.user_self_service ? 1 : 0
 
-  policy = data.aws_iam_policy_document.iam-group-with-user-self-service.json
+  policy = data.aws_iam_policy_document.iam_group_with_user_self_service.json
 }
