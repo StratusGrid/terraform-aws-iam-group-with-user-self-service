@@ -22,17 +22,6 @@ variable "path" {
   default     = "/"
 }
 
-## Not using input_tags since Groups don't currently support tags
-
-# variable "input_tags" {
-#   description = "Map of tags to apply to resources"
-#   type = "map"
-#   default = {
-#     Developer   = "StratusGrid"
-#     Provisioner = "Terraform"
-#   }
-# }
-
 variable "user_self_service" {
   description = "True/False to add inline permissions for user self service to the group. Default is True"
   type        = string
